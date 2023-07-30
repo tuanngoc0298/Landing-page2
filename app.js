@@ -9,7 +9,7 @@ let previousFeedback = 0;
 
 // Active header
 const navActive = $$(".js-nav-active");
-const activeSong = () => {
+const activeHeader = () => {
     const navItem = navActive[currentActive];
     navItem.classList.add("active");
     navActive[previousActive].classList.remove("active");
@@ -20,7 +20,7 @@ navActive.forEach((item, index) => {
             previousActive = currentActive;
             currentActive = index;
         }
-        activeSong();
+        activeHeader();
     });
 });
 
